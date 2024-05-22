@@ -45,7 +45,7 @@ public class GetRequest {
       //.assertThat().body("[0]",hasKey("country"))
       //.assertThat().body("[0]",hasValue("Denar"))
       //.assertThat().body("[0]",hasValue("Denise Cummerata"))
-      //.assertThat().body("[0]",hasEntry("name","Denise Cummerata"))
+      .assertThat().body("[0]",hasEntry("name","Denise Cummerata"))
       ;
     }
 
