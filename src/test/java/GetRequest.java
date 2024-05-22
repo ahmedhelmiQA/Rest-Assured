@@ -1,5 +1,7 @@
 import io.restassured.RestAssured;
 
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
 import io.restassured.matcher.RestAssuredMatchers;
 import org.hamcrest.Matchers;
@@ -20,10 +22,9 @@ public class GetRequest {
                 .queryParam("page","1")
                 .when().get().prettyPrint();
      }
-
    */
-    @Test
-    public void Gettest(){
+   /*@Test
+    public void Response-Assertions(){
       given().baseUri("https://664378116c6a656587073399.mockapi.io/api/v1")
         .when().get("Users")
         .then()
@@ -45,8 +46,28 @@ public class GetRequest {
       //.assertThat().body("[0]",hasKey("country"))
       //.assertThat().body("[0]",hasValue("Denar"))
       //.assertThat().body("[0]",hasValue("Denise Cummerata"))
+<<<<<<< HEAD
       .assertThat().body("[0]",hasEntry("name","Denise Cummerata"))
       ;
     }
+=======
+      //.assertThat().body("[0]",hasEntry("name","Denise Cummerata"));
+     }
+     */
+    @Test
+    public void ResponseExtrack(){
+        String name = given().baseUri("https://664378116c6a656587073399.mockapi.io/api/v1")
+                .when().get("Users")
+                .then().extract().response().path("[0].name");
+                  /// extract the full response //
+                //System.out.println(res.asString());
+>>>>>>> b42bdaf6e422a9fae0e6dcbe157691434e53a3a7
 
+               //  String name = res.path("[0].name"); // extract an item
+                // System.out.println(name);
+
+            // String name = JsonPath.from(res.asString()).getString("[0].name");
+              System.out.println(name);
+
+    }
 }
