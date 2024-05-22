@@ -23,14 +23,15 @@ public class GetRequest {
                 .when().get().prettyPrint();
      }
    */
-   /*@Test
-    public void Response-Assertions(){
+  @Test
+    public void ResponseAssertions(){
       given().baseUri("https://664378116c6a656587073399.mockapi.io/api/v1")
+       .header("","")
         .when().get("Users")
         .then()
        .log().all()
-       .assertThat().statusCode(200)
-       .assertThat().body("[0].name", is(equalTo("Denise Cummerata")))
+       .assertThat().statusCode(200);
+      // .assertThat().body("[0].name", is(equalTo("Denise Cummerata")))
       // .assertThat().body("name",hasItem("Katherine Schamberger"))
       // .assertThat().body("name",hasItems("Katherine Schamberger","Edna Haag"))
       // .assertThat().body("name",Matchers.not(hasItem("Kathe Schamberger")))
@@ -48,8 +49,8 @@ public class GetRequest {
       //.assertThat().body("[0]",hasValue("Denise Cummerata"))
       //.assertThat().body("[0]",hasEntry("name","Denise Cummerata"));
      }
-     */
-    @Test
+
+   /* @Test
     public void ResponseExtrack(){
         String name = given().baseUri("https://664378116c6a656587073399.mockapi.io/api/v1")
                 .when().get("Users")
@@ -64,4 +65,6 @@ public class GetRequest {
               System.out.println(name);
 
     }
+
+    */
 }
