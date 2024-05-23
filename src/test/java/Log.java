@@ -1,10 +1,9 @@
-import org.hamcrest.core.IsEqual;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class TestRequest2 {
+public class Log {
   /*  @Test
     public void Logging() {
         given().baseUri("https://664378116c6a656587073399.mockapi.io/api/v1")

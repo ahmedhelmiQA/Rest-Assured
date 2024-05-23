@@ -1,19 +1,10 @@
-import io.restassured.RestAssured;
-
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
 import org.testng.annotations.Test;
-import io.restassured.matcher.RestAssuredMatchers;
-import org.hamcrest.Matchers;
 
 import static io.restassured.RestAssured.given;
-import static java.util.function.Predicate.not;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.Is.is;
 
 
-public class GetRequest {
+public class Response {
   /*
     public static void main(String[] args) {
 
